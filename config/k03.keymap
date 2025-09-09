@@ -1,8 +1,6 @@
 #include "keys_ru.h"
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -32,7 +30,7 @@
 &kp TAB           &kp Q       &kp W             &kp E         &kp R       &kp T                                      &kp Y       &kp U          &kp I          &kp O          &kp P     &kp LEFT_BRACKET
 &kp LEFT_CONTROL  &kp A       &kp S             &kp D         &kp F       &kp G                                      &kp H       &kp J          &kp K          &kp L          &kp SEMI  &kp SQT
 &kp LSHFT         &kp Z       &kp X             &kp C         &kp V       &kp B       &kt LC(SPACE)    &switch_lang  &kp N       &kp M          &kp COMMA      &kp DOT        &kp FSLH  &kp NUBS
-                              &kp LEFT_ALT      &kp LEFT_GUI  &kp ESC     &mo 1       &kp SPACE        &kp ENTER     &mo 2       &kp BACKSPACE  &kp RIGHT_GUI  &kp RIGHT_ALT
+                              &kp LEFT_ALT      &kp LEFT_GUI  &kp ESC     &mo 1       &kp SPACE        &kp ENTER     &mo 1       &kp BACKSPACE  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
 
             display-name = "Base";
@@ -45,7 +43,7 @@
                 <&enc_vol>;
         };
 
-        nav {
+        nums {
             bindings = <
 &none      &none        &none          &none      &none         &none                            &none      &none     &none             &none           &none          &none
 &kp GRAVE  &kp N1       &kp N2         &kp N3     &kp N4        &kp N5                           &kp N6     &kp N7    &kp N8            &kp N9          &kp N0         &kp BSLH
@@ -57,28 +55,24 @@
             display-name = "Navigation";
         };
 
-        sym {
+        layer_2 {
             bindings = <
-&trans  &trans    &kp AT    &kp DLLR   &kp HASH  &trans                       &trans     &trans    &kp CARET  &trans    &trans    &trans
-&trans  &trans    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &trans     &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
-&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &trans
-&trans  &trans    &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &trans    &trans
-                  &trans    &trans     &trans    &mo 3      &trans    &trans  &trans     &trans    &trans     &trans
+&trans     &trans         &trans         &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
+&kp GRAVE  &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
+&trans     &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(RPAR)  &kp RBKT   &kp LS(RBRC)  &kp LS(GT)    &kp MINUS
+&trans     &kp LS(AT)     &kp LS(TILDE)  &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
+                          &trans         &trans         &trans         &trans        &trans    &trans  &trans     &trans        &trans     &trans
             >;
-
-            display-name = "Symbols";
         };
 
-        adj {
+        layer_3 {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans            &trans        &trans        &studio_unlock
-&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans        &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans        &trans
-                     &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
+&trans     &trans         &trans        &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
+&kp GRAVE  &kp N1         &kp N2        &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
+&trans     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(LPAR)  &kp LBKT   &kp LS(LBRC)  &kp LS(LT)    &kp MINUS
+&trans     &kp LS(AT)     &kp GRAVE     &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
+                          &trans        &trans         &trans         &mo 2         &trans    &trans  &mo 2      &trans        &trans     &trans
             >;
-
-            display-name = "Adjust";
         };
     };
 };
