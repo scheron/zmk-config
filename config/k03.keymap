@@ -43,16 +43,16 @@
                 <&enc_vol>;
         };
 
-        nums {
+        layer_1 {
             bindings = <
-&none      &none        &none          &none      &none         &none                            &none      &none     &none             &none           &none          &none
-&kp GRAVE  &kp N1       &kp N2         &kp N3     &kp N4        &kp N5                           &kp N6     &kp N7    &kp N8            &kp N9          &kp N0         &kp BSLH
-&trans     &kp HASH     &kp DOLLAR     &kp PRCNT  &kp QMARK     &kp EXCL                         &kp EQUAL  &kp LPAR  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN  &kp MINUS
-&trans     &kp AT_SIGN  &kp LC(GRAVE)  &kp CARET  &kp LC(PIPE)  &kp AMPERSAND  &trans    &trans  &kp COLON  &kp DOT   &kp COMMA         &kp SQT         &kp ASTRK      &kp PLUS
-                        &trans         &trans     &trans        &mo 2          &trans    &trans  &mo 2      &trans    &trans            &trans
+&trans     &trans         &trans        &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
+&kp GRAVE  &kp N1         &kp N2        &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
+&trans     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(LPAR)  &kp LBKT   &kp LS(LBRC)  &kp LS(LT)    &kp MINUS
+&trans     &kp LS(AT)     &kp GRAVE     &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
+                          &trans        &trans         &trans         &mo 2         &trans    &trans  &mo 2      &trans        &trans     &trans
             >;
 
-            display-name = "Navigation";
+            label = "Mode Left";
         };
 
         layer_2 {
@@ -63,16 +63,8 @@
 &trans     &kp LS(AT)     &kp LS(TILDE)  &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
                           &trans         &trans         &trans         &trans        &trans    &trans  &trans     &trans        &trans     &trans
             >;
-        };
 
-        layer_3 {
-            bindings = <
-&trans     &trans         &trans        &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
-&kp GRAVE  &kp N1         &kp N2        &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
-&trans     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(LPAR)  &kp LBKT   &kp LS(LBRC)  &kp LS(LT)    &kp MINUS
-&trans     &kp LS(AT)     &kp GRAVE     &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
-                          &trans        &trans         &trans         &mo 2         &trans    &trans  &mo 2      &trans        &trans     &trans
-            >;
+            label = "Mode Right";
         };
     };
 };
