@@ -52,7 +52,7 @@
                           &trans        &trans         &trans         &mo 2         &trans    &trans  &mo 2      &trans        &trans     &trans
             >;
 
-            label = "Mode Left";
+            label = "👾";
         };
 
         layer_2 {
@@ -64,7 +64,7 @@
                           &trans         &trans         &trans         &trans        &trans    &trans  &trans     &trans        &trans     &trans
             >;
 
-            label = "Mode Right";
+            label = "🧑‍💻";
         };
     };
 };
