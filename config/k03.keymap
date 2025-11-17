@@ -23,7 +23,7 @@
         change_win: change_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LC(LG(LA(LS(C))))>;
+            bindings = <&kp LC(LG(LA(LS(C))))>;
             label = "CHANGE_WIN";
         };
     };
