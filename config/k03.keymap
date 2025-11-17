@@ -19,6 +19,13 @@
             bindings = <&kt LC(SPACE)>;
             label = "SWITCH_LANG";
         };
+
+        change_win: change_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LC(LG(LA(LS(C))))>;
+            label = "CHANGE_WIN";
+        };
     };
 
     keymap {
@@ -26,7 +33,7 @@
 
         base {
             bindings = <
-&none             &kp LA(N1)  &kp LA(NUMBER_2)  &kp LA(N3)    &kp LA(N4)  &kp LA(N5)                                  &kp LA(N6)  &kp LA(N7)     &kp LA(N8)     &none          &none     &none
+&change_win       &kp LA(N1)  &kp LA(NUMBER_2)  &kp LA(N3)    &kp LA(N4)  &kp LA(N5)                                  &kp LA(N6)  &kp LA(N7)     &kp LA(N8)     &none          &none     &none
 &kp TAB           &kp Q       &kp W             &kp E         &kp R       &kp T                                       &kp Y       &kp U          &kp I          &kp O          &kp P     &kp LEFT_BRACKET
 &kp LEFT_CONTROL  &kp A       &kp S             &kp D         &kp F       &kp G                                       &kp H       &kp J          &kp K          &kp L          &kp SEMI  &kp SQT
 &kp LSHFT         &kp Z       &kp X             &kp C         &kp V       &kp B       &kp LC(SPACE)    &kp LC(SPACE)  &kp N       &kp M          &kp COMMA      &kp DOT        &kp FSLH  &kp NUBS
@@ -48,7 +55,7 @@
 &trans     &trans         &trans        &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
 &kp GRAVE  &kp N1         &kp N2        &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
 &trans     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(LPAR)  &kp LBKT   &kp LS(LBRC)  &kp LS(LT)    &kp MINUS
-&trans     &kp LS(AT)     &kp GRAVE     &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
+&trans     &kp LS(AT)     &kp GRAVE     &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp COLON  &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
                           &trans        &trans         &trans         &mo 2         &trans    &trans  &mo 2      &trans        &trans     &trans
             >;
 
@@ -57,11 +64,11 @@
 
         layer_2 {
             bindings = <
-&trans     &trans         &trans         &trans         &trans         &trans                          &trans     &trans        &trans     &trans        &trans        &trans
-&kp GRAVE  &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
-&trans     &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL  &kp LS(RPAR)  &kp RBKT   &kp LS(RBRC)  &kp LS(GT)    &kp MINUS
-&trans     &kp LS(AT)     &kp LS(TILDE)  &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp SEMI   &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
-                          &trans         &trans         &trans         &trans        &trans    &trans  &trans     &trans        &trans     &trans
+&trans     &trans         &trans         &trans         &trans         &trans                          &trans             &trans        &trans     &trans        &trans        &trans
+&kp GRAVE  &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                          &kp N6             &kp N7        &kp N8     &kp N9        &kp N0        &kp BSLH
+&trans     &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)  &kp LS(QMARK)  &kp LS(EXCL)                    &kp EQUAL          &kp LS(RPAR)  &kp RBKT   &kp LS(RBRC)  &kp LS(GT)    &kp MINUS
+&trans     &kp LS(AT)     &kp LS(TILDE)  &kp LS(CARET)  &kp LS(PIPE)   &kp LS(AMPS)  &trans    &trans  &kp RG(LC(COLON))  &kp DOT       &kp COMMA  &kp LS(DQT)   &kp LS(STAR)  &kp PLUS
+                          &trans         &trans         &trans         &trans        &trans    &trans  &trans             &trans        &trans     &trans
             >;
 
             label = "Right";
