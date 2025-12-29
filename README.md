@@ -2,7 +2,7 @@
 Synchronize your fork with the main ZMK repository to get the latest updates. After that, build (compile) the firmware and download the resulting *.uf2 files: one for the left and right halves, and one for the Qube dongle.
 
 
-Additionally, you will need a reset firmware (settings_reset-ergohaven-zmk.uf2). Usually, it can be found in the same place as the main firmware, or in our keymap_hub.
+Additionally, you will need a reset firmware (settings_reset-ergohaven-zmk.uf2). Usually, it can be found in the same place as the main firmware, or in our [keymap_hub](https://github.com/ergohaven/keymap_hub).
 
 ![image](https://journey.ergohaven.xyz/images/qube/keymap_hub.png)
 
