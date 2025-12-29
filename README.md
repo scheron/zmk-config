@@ -1,4 +1,4 @@
-<img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/8c506db9-39f4-495a-a52e-e34c79a50c1e" /><img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/9ef621d8-4317-4425-92b9-a92dfe1c6fe0" /><img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/a3dee177-d60c-433a-934b-1f874ceb95b4" />Step 1: Preparing the firmware
+Step 1: Preparing the firmware
 Before you begin, you need to obtain the latest firmware files. The firmware file is essentially the “brain” of your keyboard, which determines how it works.
 
 If you have a fork (copy) of the repository on GitHub: Synchronize your fork with the main ZMK repository to get the latest updates. After that, build (compile) the firmware and download the resulting *.uf2 files: one for the left and right halves, and one for the Qube dongle.
